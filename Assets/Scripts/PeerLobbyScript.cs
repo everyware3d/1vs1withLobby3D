@@ -223,7 +223,7 @@ public class PeerLobbyScript : MonoBehaviour, P2PObject.PeerComputerUpdates
     }
     public void TurnOffLobbyMessage()
     {
-        StartCoroutine(CallLater(5.0f, () =>
+        StartCoroutine(CallLater(3.0f, () =>
         {
             lobbyMessageGO.SetActive(false);
             Debug.Log("Called after 5 seconds on main thread!");
@@ -231,7 +231,7 @@ public class PeerLobbyScript : MonoBehaviour, P2PObject.PeerComputerUpdates
     }
     public void TurnOffLobbyMessageAndPlay(bool isPrimaryLeftPlayer = false, long fromPeerID = 0)
     {
-        StartCoroutine(CallLater(5.0f, () =>
+        StartCoroutine(CallLater(3.0f, () =>
         {
             isPlaying = true;
             localLobbyPeerInstance.Delete();
